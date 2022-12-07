@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
-
+  id=""
+  name=""
+  category=""
+  description=""
+  price=""
+  image=""
+ readValues=()=>{
+  let data={"price":this.price,"id":this.id,"name":this.name,"category":this.category,"description":this.description,"image":this.image }
+  console.log(data)
+ }
 }
