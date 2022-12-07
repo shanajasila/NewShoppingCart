@@ -10,6 +10,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SearchProductComponent } from './search-product/search-product.component';
 
 const myRoute :Routes=[
   {
@@ -22,6 +23,15 @@ const myRoute :Routes=[
   },
   {
     path:"searchproduct",
+    component:SearchProductComponent
+  },
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"registration",
+    component:UserRegistrationComponent
   }
 
 ]
@@ -34,7 +44,8 @@ const myRoute :Routes=[
     UserRegistrationComponent,
     AddProductComponent,
     ViewProductComponent,
-    NavBarComponent
+    NavBarComponent,
+    SearchProductComponent
   ],
   imports: [
     BrowserModule,
