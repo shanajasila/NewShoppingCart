@@ -2,12 +2,12 @@
     <div class="centered col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <h3 class="text-center top"style="color:#323773;line-height: 1.5;font-size: 40px;top: 8px;">Admin Login</h3>
             <label for="" class="form-label pt-5">Username</label>
-            <input type="text" class="form-control">
+            <input type="text" name="username" [(ngModel)]="username" class="form-control">
             <label for="" class="form-label pt-5">Password</label>
-            <input type="password"  id="" class="form-control">
+            <input type="password" name="password" [(ngModel)]="password" id="" class="form-control">
     </div>        
          <div class=" col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-            <button   class="btn btn-success mt-5 ">Login</button>     
+            <button (click)="readvalue()" class="btn btn-success mt-5 ">Login</button>     
         </div>    
             <div class=" col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center mt-4">
                  <a routerLink="/userlogin" style="font-size:20px ;">Click here for User login</a>

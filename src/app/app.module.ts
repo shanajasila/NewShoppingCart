@@ -17,6 +17,10 @@ import {HttpClientModule} from '@angular/common/http';
 const myRoute :Routes=[
   {
     path:"",
+    component:AdminLoginComponent
+  },
+  {
+    path:"addproduct",
     component:AddProductComponent
   },
   {
