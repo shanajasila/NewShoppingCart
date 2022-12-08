@@ -13,6 +13,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SearchLoginComponent } from './search-login/search-login.component';
+import { NavloginComponent } from './navlogin/navlogin.component';
 
 const myRoute :Routes=[
   {
@@ -38,6 +40,10 @@ const myRoute :Routes=[
   {
     path:"registration",
     component:UserRegistrationComponent
+  },
+  {
+    path:"searchlogin",
+    component:SearchLoginComponent
   }
 
 ]
@@ -51,7 +57,9 @@ const myRoute :Routes=[
     AddProductComponent,
     ViewProductComponent,
     NavBarComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    SearchLoginComponent,
+    NavloginComponent
   ],
   imports: [
     BrowserModule,

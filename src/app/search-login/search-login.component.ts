@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-search-product',
-  templateUrl: './search-product.component.html',
-  styleUrls: ['./search-product.component.css']
+  selector: 'app-search-login',
+  templateUrl: './search-login.component.html',
+  styleUrls: ['./search-login.component.css']
 })
-export class SearchProductComponent {
+export class SearchLoginComponent {
+
   name=""
   searchData:any=[]
   constructor(private api:ApiService){
@@ -16,6 +17,7 @@ export class SearchProductComponent {
       }
     )
   }
+
   readvalue=()=>{
     let data={"name" :this.name}
     console.log(data)
