@@ -9,7 +9,13 @@ import { ApiService } from '../api.service';
 export class SearchProductComponent {
   name=""
   searchData:any=[]
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService){
+    this.api.fetchproduct().subscribe(
+      (response:any)=>{
+        this.searchData=response
+      }
+    )
+  }
   readvalue=()=>{
     let data={"name" :this.name}
     console.log(data)
