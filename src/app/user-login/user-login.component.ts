@@ -26,7 +26,7 @@ export class UserLoginComponent {
         }
         else{
           this.searchuser=response;
-          this.route.navigate(['/searchproduct'])
+          this.route.navigate(['/searchlogin'])
         }
      }
     )
