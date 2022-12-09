@@ -18,15 +18,18 @@ export class UserLoginComponent {
     console.log(data)
     this.api.userlogin(data).subscribe(
       (response:any)=>{
-        console.log(response)
-        if(response.length==0){
-          alert("Invalid email or password")
-          this.email=""
+        this.email=""
           this.password=""
+  
+        if(response.status=="success"){
+          let userId=response.userId
+          console.log(userId)
+          localStorage.setItem("userInfo",userId)
+          this.route.navigate(['/searchlogin'])
+          
         }
         else{
-          this.searchuser=response;
-          this.route.navigate(['/searchlogin'])
+         alert(response.message)
         }
      }
     )
